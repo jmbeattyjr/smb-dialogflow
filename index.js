@@ -8,9 +8,9 @@ const app = dialogflow({ debug: true })
 app.intent('Default Welcome Intent', conv => {
   conv.ask('Welcome to number echo! Say a number.')
 })
-app.intent('Stow My Boat - Phone Verification', (conv, { phoneNumber }) => {
+app.intent('Stow My Boat - Phone Verification', (conv, { $phoneNumber }) => {
   // extract the num parameter as a local string variable
-  conv.close(`You said ${phoneNumber}`)
+  conv.close(`You said this is on heroku ${$phoneNumber}`)
 })
 // app.intent('Default Fallback Intent', (conv) => {
 //     conv.ask('Please repeat');
