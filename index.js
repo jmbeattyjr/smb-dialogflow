@@ -12,10 +12,10 @@ const app = dialogflow({debug: true});
 //     conv.ask('Please repeat');
 // });
 
-// app.intent('Default Welcome Intent', (conv) => {
-//     conv.ask('Hi, what do you wanna talk about?');
-//     conv.ask(new Suggestions(['fashion tips', 'celebrity news']));
-// });
+app.intent('WELCOME_INTENT', (conv) => {
+    conv.ask('Hi, what do you wanna talk about?');
+    conv.ask(new Suggestions(['fashion tips', 'celebrity news']));
+});
 
 app.fallback((conv) => {
     // intent contains the name of the intent
