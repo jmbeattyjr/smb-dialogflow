@@ -8,7 +8,8 @@
   },
   "author": "me",
   "dependencies": {
-    "dialogflow-fulfillment": "^0.4.1",
+    "dialogflow": "^0.6.0",
+    "dialogflow-fulfillment": "^0.5.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "actions-on-google": "^2.2.0"
