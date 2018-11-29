@@ -1,0 +1,6 @@
+{
+    "name": "smb-dialogflow",
+    "description": "Webhook echo sample",
+    "repository": "https://github.com/jmbeattyjr/smb-dialogflow.git",
+    "keywords": ["api.ai", "dialogflow", "natural language"]
+  }
