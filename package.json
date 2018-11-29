@@ -1,0 +1,16 @@
+{
+  "name": "smb-dialogflow",
+  "version": "0.0.1",
+  "description": "Test Agent webhook",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "me",
+  "dependencies": {
+    "dialogflow-fulfillment": "^0.4.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "actions-on-google": "^2.2.0"
+  }
+}
