@@ -8,14 +8,14 @@ const functions = require('firebase-functions');
 
 const app = dialogflow({debug: true});
 
-app.fallback('Default Fallback Intent', (conv) => {
+app.intent('Default Fallback Intent', (conv) => {
     conv.ask('Please repeat');
 });
 
-// app.intent('Default Welcome Intent', (conv) => {
-//     conv.ask('Hi, what do you wanna talk about?');
-//     conv.ask(new Suggestions(['fashion tips', 'celebrity news']));
-// });
+app.intent('Default Welcome Intent', (conv) => {
+    conv.ask('Hi, what do you wanna talk about?');
+    conv.ask(new Suggestions(['fashion tips', 'celebrity news']));
+});
 
 // app.fallback((conv) => {
 //     // intent contains the name of the intent
