@@ -8,7 +8,7 @@ const functions = require('firebase-functions');
 
 const app = dialogflow({debug: true});
 
-app.intent('Default Fallback Intent', (conv) => {
+app.fallback('Default Fallback Intent', (conv) => {
     conv.ask('Please repeat');
 });
 
@@ -17,20 +17,20 @@ app.intent('Default Welcome Intent', (conv) => {
     conv.ask(new Suggestions(['fashion tips', 'celebrity news']));
 });
 
-app.fallback((conv) => {
-    // intent contains the name of the intent
-    // you defined in the Intents area of Dialogflow
-    const intent = conv.intent;
-    switch (intent) {
-      case WELCOME_INTENT:
-        conv.ask('Welcome! Say a number.');
-        break;
-      case NUMBER_INTENT:
-        const num = conv.arguments.get(NUMBER_ARGUMENT);
-        conv.close(`You said ${num}`);
-        break;
-    }
-   });
+// app.fallback((conv) => {
+//     // intent contains the name of the intent
+//     // you defined in the Intents area of Dialogflow
+//     const intent = conv.intent;
+//     switch (intent) {
+//       case WELCOME_INTENT:
+//         conv.ask('Welcome! Say a number.');
+//         break;
+//       case NUMBER_INTENT:
+//         const num = conv.arguments.get(NUMBER_ARGUMENT);
+//         conv.close(`You said ${num}`);
+//         break;
+//     }
+//    });
 
 // handlers for other intents...
 
